@@ -62,6 +62,10 @@ def shorten():
     
     return jsonify({'short_url': short_url, 'long_url': url_received}), 201
 
+@app.route('/')
+def index():
+    return jsonify({'status': 'URL Shortener API is running smoothly!'}), 200
+
 @app.route('/api/urls', methods=['GET'])
 def get_all_urls():
     urls = Urls.query.all()
