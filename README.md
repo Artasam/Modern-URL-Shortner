@@ -1,5 +1,7 @@
 # Advanced Modern URL Shortener (2026 Stack)
 
+🚀 **Live Application:** [https://modern-url-shortner.vercel.app/](https://modern-url-shortner.vercel.app/)
+
 A strictly modular, highly decoupled Full-Stack URL shortener demonstrating modern 2026 stack best practices, including Next-Generation React and Three.js visuals.
 
 ## 🚀 Architectural Blueprint
@@ -81,3 +83,8 @@ The React app will proxy and connect to the Flask server seamlessly.
 ## 🧪 Testing and Performance
 - Web Vitals target: **>= 95** for LCP and CLS.
 - Test suites implemented via `vitest`.
+
+## 🌐 Production Deployment
+This application is fully responsive and deployed serverlessly:
+- **Frontend**: Deployed seamlessly on [Vercel](https://modern-url-shortner.vercel.app/).
+- **Backend API**: Hosted for free using [PythonAnywhere](https://www.pythonanywhere.com/). SQLite handles the storage persistently on PythonAnywhere's local filesystem.
