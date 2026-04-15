@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useGetUrls } from '../../../entities/url/hooks';
-import { Globe, ArrowRight, ExternalLink } from 'lucide-react';
+import { Globe, ExternalLink } from 'lucide-react';
 import { API_BASE_URL } from '../../../shared/lib/api';
 
 export function UrlList() {

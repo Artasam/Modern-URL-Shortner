@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { renderHook, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { useGetUrls, useShortenUrl } from '../hooks';
+import { useGetUrls } from '../hooks';
 import * as api from '../../../shared/lib/api';
 
 vi.mock('../../../shared/lib/api', () => ({
