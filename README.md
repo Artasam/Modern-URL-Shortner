@@ -24,7 +24,7 @@ graph TD
 
     subgraph Backend [Flask JSON REST API]
         direction TB
-        Routes[/api/* Endpoints]
+        Routes["/api/* Endpoints"]
         Service[Shortening Logic]
         Models[SQLAlchemy Models]
         DB[(SQLite)]
