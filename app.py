@@ -9,8 +9,11 @@ app = Flask(__name__)
 # Enable CORS so our frontend can communicate with the backend
 CORS(app)
 
-# Handle Render environment variable DATABASE_URL and dialect mismatch
-database_url = os.getenv('DATABASE_URL', os.getenv('DATABASE_URI', 'sqlite:///urls.db'))
+# Handle Render/PythonAnywhere environment specifics
+basedir = os.path.abspath(os.path.dirname(__file__))
+default_db = 'sqlite:///' + os.path.join(basedir, 'urls.db')
+
+database_url = os.getenv('DATABASE_URL', os.getenv('DATABASE_URI', default_db))
 if database_url.startswith("postgres://"):
     database_url = database_url.replace("postgres://", "postgresql://", 1)
 
