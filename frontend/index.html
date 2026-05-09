@@ -3,13 +3,41 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>URL-Shortner</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #020617;
+    }
+    #root-loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      background-color: #020617;
+    }
+    .logo-spinner {
+      width: 120px;
+      height: 120px;
+      animation: pulse 2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.8; }
+    }
+  </style>
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <div id="root-loader">
+      <img src="/logo.svg" alt="Loading URL Shortener..." class="logo-spinner" />
+    </div>
+  </div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
